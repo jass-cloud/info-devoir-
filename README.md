@@ -1,0 +1,268 @@
+/* =========================
+   STYLE GÉNÉRAL
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #faf7f8;
+}
+
+/* =========================
+   EN-TÊTE
+   ========================= */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ead9df;
+  padding: 20px 8%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+  color: #3f6b57;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #a85d78;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #3f6b57;
+}
+
+/* =========================
+   PRÉSENTATION
+   ========================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  min-height: 500px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+}
+
+.intro {
+  font-weight: bold;
+  color: #a85d78;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3f6b57;
+}
+
+/* Photo */
+.hero img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ead9df;
+}
+
+/* =========================
+   BOUTON
+   ========================= */
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  background-color: #a85d78;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background-color: #8e4b64;
+}
+
+/* =========================
+   PARCOURS SCOLAIRE
+   ========================= */
+
+.timeline {
+  border-left: 3px solid #a85d78;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 35px;
+}
+
+.timeline-item span {
+  color: #a85d78;
+  font-weight: bold;
+}
+
+.timeline-item h3 {
+  color: #3f6b57;
+  margin: 5px 0;
+}
+
+/* =========================
+   EXPÉRIENCES
+   ========================= */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.experience {
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #ead9df;
+  border-radius: 8px;
+}
+
+.experience span {
+  color: #a85d78;
+  font-weight: bold;
+}
+
+.experience h3 {
+  color: #3f6b57;
+  margin-top: 5px;
+}
+
+.experience h4 {
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: #777;
+}
+
+/* =========================
+   CARTES
+   ========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #ead9df;
+  border-radius: 8px;
+}
+
+.card h3 {
+  color: #a85d78;
+  margin-bottom: 10px;
+}
+
+/* Petit effet lorsque la souris passe sur une carte */
+.card:hover,
+.experience:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact {
+  text-align: center;
+  background-color: #f3e6eb;
+  border-radius: 10px;
+}
+
+/* =========================
+   PIED DE PAGE
+   ========================= */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: white;
+  border-top: 1px solid #ead9df;
+}
+
+/* =========================
+   VERSION MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .cards,
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
